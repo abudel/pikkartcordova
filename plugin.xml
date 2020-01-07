@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="pikkartcordova" version="1.0.0">
+   <name>PikkartCordova</name>
+   <js-module name="PikkartCordova" src="www/PikkartCordova.js">
+      <clobbers target="cordova.plugins.pikkart" />
+   </js-module>
+   <platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="PikkartCordova">
+			    <param name="ios-package" value="CDVPikkartCordova" />
+			</feature>
+		</config-file>
+		<config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+		    <string>PikkartARExample vuole utilizzare la fotocamera</string>
+		</config-file>
+		<source-file src="src/ios/CDVPikkartCordova.mm" />
+		<source-file src="src/ios/CDVPikkartCordova.h" />
+		<source-file src="src/ios/PKTCordovaRenderingViewController.h" />
+		<source-file src="src/ios/PKTCordovaRenderingViewController.m" />
+		<framework src="libsqlite3.tbd" />
+		<framework src="SystemConfiguration.framework" />
+		<framework src="SafariServices.framework" />
+		<framework src="Foundation.framework" />
+		<framework src="UIKit.framework" />
+		<framework src="src/ios/frameworks/pikkartAR.framework" custom="true"/>
+		<framework src="src/ios/frameworks/pikkartARRendering.framework" custom="true"/>
+		<framework src="src/ios/frameworks/pikkartARRenderingCloudPlugin.framework" custom="true"/>
+		<framework src="src/ios/frameworks/pikkartJSON.framework" custom="true" embed="true"/>
+		<resource-file src="src/ios/Resources/PKTCPInfoContainerContentView.xib" />
+		<resource-file src="src/ios/Resources/pikkartAR.bundle" />
+		<resource-file src="src/ios/Resources/pikkartARLocalized.bundle" />
+		<resource-file src="src/ios/Resources/pikkartARRenderingCloudPlugin.bundle" />
+		<resource-file src="src/ios/Resources/license.spz" />
+	</platform>
+   <platform name="android">
+		<framework src="src/android/pikkartcordova.gradle" custom="true" type="gradleReference" />
+		<resource-file src="libscontainer/pikkart_ar_sdk.aar" target="libs/pikkart_ar_sdk.aar" />
+		<resource-file src="libscontainer/pikkart_ar_sdk_geo.aar" target="libs/pikkart_ar_sdk_geo.aar" />
+		<resource-file src="libscontainer/pikkart_ar_sdk_rendering.aar" target="libs/pikkart_ar_sdk_rendering.aar" />
+		<resource-file src="libscontainer/pikkart_ar_sdk_cms.aar" target="libs/pikkart_ar_sdk_cms.aar" />
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="PikkartCordova">
+				<param name="android-package" value="pikkart.cordova.recognition.PikkartCordova.PikkartCordova" />
+			</feature>
+		</config-file>
+	
+		<source-file src="src/android/PikkartCordova.java" target-dir="src/pikkart/cordova/recognition/PikkartCordova" />
+   </platform>
+</plugin>

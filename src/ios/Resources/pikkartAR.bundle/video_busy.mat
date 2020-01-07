@@ -1,0 +1,5 @@
+material
+texture busy.png
+shaders stdvertex.vsh stdfragment.fsh
+blended
+material_end

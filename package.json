@@ -1,0 +1,19 @@
+{
+  "name": "pikkartcordova",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "pikkartcordova",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "Pikkart srl",
+  "license": "ISC"
+}

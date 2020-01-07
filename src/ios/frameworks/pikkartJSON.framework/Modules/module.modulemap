@@ -1,0 +1,6 @@
+framework module pikkartJSON {
+  umbrella header "pikkartJSON.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,7 @@
+material
+shaders highlight_vertex.vsh highlight_fragment.fsh
+unicolor 1.0 1.0 0.0 0.8
+inflate 1.01
+blended
+nodepth
+material_end

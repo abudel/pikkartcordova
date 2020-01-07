@@ -1,0 +1,5 @@
+material
+video_texture
+shaders stdvertex.vsh videofragment.fsh
+doublesided
+material_end

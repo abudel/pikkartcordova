@@ -1,0 +1,9 @@
+material
+texture empty.png
+shaders base_lighting.vsh car_lighting.fsh
+diffuseColor 0.8 0.3 0.2
+specularColor 0.2 0.2 0.2
+emissiveColor 0.0 0.0 0.0
+ambientColor 0.2 0.2 0.2
+shininess 1.0
+material_end

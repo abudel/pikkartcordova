@@ -1,0 +1,5 @@
+material
+texture defaultVideoKeyFrame.png
+shaders stdvertex.vsh stdfragment.fsh
+blended
+material_end
