@@ -23,7 +23,6 @@
 		<framework src="Foundation.framework" />
 		<framework src="UIKit.framework" />
 		<framework src="src/ios/frameworks/pikkartAR.framework" custom="true"/>
-		<framework src="src/ios/frameworks/pikkartJSON.framework" custom="true" />
 		<framework src="src/ios/frameworks/pikkartARRendering.framework" custom="true"/>
 		<framework src="src/ios/frameworks/pikkartARRenderingCloudPlugin.framework" custom="true"/>
 		<framework src="src/ios/frameworks/pikkartJSON.framework" custom="true" embed="true"/>
